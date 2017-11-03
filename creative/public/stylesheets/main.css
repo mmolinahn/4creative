@@ -1,0 +1,56 @@
+.parent {
+  text-align: center;
+}
+.parent > ul {
+  display: inline-block;
+}
+
+ul {
+      text-align: center;
+    list-style-position: inside;
+   display: inline-block;
+}
+
+#girlResults {
+
+	color: black;
+}
+
+#boyResults {
+
+        color: black;
+}
+
+header { 
+	text-align:center;
+	background-color:  #f4c2c2;
+        border-color: #f4c2c2;
+	height: 250px;
+
+}
+p {
+	color: black;
+
+}
+
+
+body {
+
+	background-color: #a0d8f3;
+
+}
+
+h1{
+	color: black;
+        text-align: center;	
+}
+h3 {
+	color: black;
+
+}
+html, body {
+	margin : 0;
+	padding : 0;
+
+
+}

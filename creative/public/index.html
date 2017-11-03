@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>City Finder</title>
+<link href="./stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
+<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+</script>
+
+<script>
+
+
+
+
+$(document).ready(function(){
+$("#boyButton").click(function(e){
+  e.preventDefault();
+var myurl= "/getBoys";
+  $.ajax({
+	url : myurl,
+	datatype: "json",
+	success : function(data) {
+		var j = Math.floor(Math.random() * 140 );
+	    $("#boyResults").html(data[j].data);
+	}
+  });
+    
+  });
+$("#girlButton").click(function(e){
+  e.preventDefault();
+var myurl= "/getGirls";
+  $.ajax({
+        url : myurl,
+        datatype: "json",
+        success : function(data) {
+		var i = Math.floor(Math.random() * 140 );
+            $("#girlResults").html(data[i].data);
+        }
+  });
+    
+  });
+
+
+});
+</script>
+
+</head>
+<body>
+<header>
+<br>
+<br>
+<h1>Baby Name Ideas</h1>
+<br>
+<br>
+</header>
+<br>
+<br>
+<center>
+<input id="boyButton" type="submit" value="Having a Boy?">
+<br>
+<div id="boyResults">No Results</div>
+<br>
+<br>
+<br>
+<input id="girlButton" type="submit" value="Having a Girl?">
+<br>
+<div id="girlResults">No Results</div>
+
+</center>
+
+</body>
+
+</html>
